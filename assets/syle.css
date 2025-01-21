@@ -2,4 +2,88 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+}
+
+:root {
+    --za-header_color: #ff6900;
+    --za-header_color_hover: #d6b70c;
+}
+
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--za-header_color);
+    height: 70px;
+
+    #menu {
+        display: flex;
+        justify-content: space-between;
+
+        #Container_logo {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+
+            #logo {
+                width: 20%;
+            }
+        }
+
+
+        #container_icons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 70px;
+
+            .fa-regular,
+            .fa-user,
+            .fa-regular,
+            .fa-heart,
+            .fa-solid,
+            .fa-bag-shopping {
+                width: 15px;
+                height: 20px;
+                margin-left: 6px;
+                margin-right: 6px;
+                color: white;
+            }
+
+            .fa-regular,
+            .fa-user :hover {
+                color: var(--za-header_color_hover);
+            }
+
+            .fa-regular,
+            .fa-heart :hover {
+                color: var(--za-header_color_hover);
+            }
+
+            .fa-solid,
+            .fa-bag-shopping :hover {
+                color: var(--za-header_color_hover);
+            }
+        }
+    }
+
+    #container_categorie {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .categorie {
+            text-decoration: none;
+            color: white;
+            margin-left: 6px;
+            margin-right: 6px;
+        }
+
+        .categorie:hover {
+            color: #d6b70c;
+            transition: 0.5s;
+        }
+    }
 }
