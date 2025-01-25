@@ -2,15 +2,31 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 
+}
+
+#debug {
+    main {
+        background-color: rgba(0, 0, 255, 0.454);
+    }
+
+    .row_product {
+        background-color: red;
+    }
+
+    .product {
+        background-color: green;
+    }
 }
 
 :root {
     --za-header_color: #ff6900;
-    --za-header_color_hover: #d6b70c;
+    --za-danger: #bb1a10;
+    --za-safe: #0b7310;
 }
 
-
+/*menu*/
 header {
     display: flex;
     align-items: center;
@@ -18,72 +34,436 @@ header {
     background-color: var(--za-header_color);
     height: 70px;
 
-    #menu {
-        display: flex;
-        justify-content: space-between;
+    section {
+        width: 80%;
 
-        #Container_logo {
-            justify-content: center;
-            align-items: center;
+        #menu {
             display: flex;
+            justify-content: space-between;
 
-            #logo {
-                width: 20%;
+            #Container_logo {
+                justify-content: center;
+                align-items: center;
+                display: flex;
+
+                #logo {
+                    width: 20%;
+                }
+            }
+
+            #container_icons {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 70px;
+
+                .fa-regular,
+                .fa-user,
+                .fa-regular,
+                .fa-heart,
+                .fa-solid,
+                .fa-bag-shopping {
+                    width: 15px;
+                    height: 20px;
+                    margin-left: 6px;
+                    margin-right: 6px;
+                    color: white;
+                }
             }
         }
 
-
-        #container_icons {
+        #container_categorie {
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 70px;
 
-            .fa-regular,
-            .fa-user,
-            .fa-regular,
-            .fa-heart,
-            .fa-solid,
-            .fa-bag-shopping {
-                width: 15px;
-                height: 20px;
+            .categorie {
+                text-decoration: none;
+                color: white;
                 margin-left: 6px;
                 margin-right: 6px;
-                color: white;
-            }
-
-            .fa-regular,
-            .fa-user :hover {
-                color: var(--za-header_color_hover);
-            }
-
-            .fa-regular,
-            .fa-heart :hover {
-                color: var(--za-header_color_hover);
-            }
-
-            .fa-solid,
-            .fa-bag-shopping :hover {
-                color: var(--za-header_color_hover);
             }
         }
     }
+}
 
-    #container_categorie {
+/*card*/
+main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 1570px;
+
+    .row_product {
         display: flex;
-        justify-content: center;
-        align-items: center;
+        height: 748px;
+        width: 1378px;
+        margin-top: 60px;
 
-        .categorie {
-            text-decoration: none;
-            color: white;
-            margin-left: 6px;
-            margin-right: 6px;
-        }
+        .product {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: calc(100% / 12 * 4);
+            padding: 20px;
 
-        .categorie:hover {
-            color: #d6b70c;
-            transition: 0.5s;
+            #img_1 {
+                position: relative;
+                display: flex;
+                align-items: end;
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-image: url(./img/1.webp);
+
+                #sostenibiliti {
+                    background-color: var(--za-safe);
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    height: 30px;
+                    margin-bottom: 40px;
+                    color: white;
+                }
+
+                .sconto {
+                    background-color: var(--za-danger);
+                    color: white;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    height: 30px;
+                    margin-bottom: 40px;
+                    margin-right: 5px;
+                }
+
+                .fa-solid,
+                .fa-heart {
+                    position: absolute;
+                    bottom: 34rem;
+                    left: 22rem;
+                    font-size: 25px;
+                    background-color: white;
+                    padding: 15px;
+                    border-radius: 50%;
+                }
+
+                .fa-heart:hover {
+                    color: red;
+                }
+            }
+
+
+            #img_2 {
+                position: relative;
+                display: flex;
+                align-items: end;
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-image: url(./img/2.webp);
+
+                #sostenibiliti {
+                    background-color: var(--za-safe);
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    height: 30px;
+                    margin-bottom: 40px;
+                    color: white;
+                }
+
+                .sconto {
+                    background-color: var(--za-danger);
+                    color: white;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    height: 30px;
+                    margin-bottom: 40px;
+                    margin-right: 5px;
+                }
+
+                .fa-solid,
+                .fa-heart {
+                    position: absolute;
+                    bottom: 34rem;
+                    left: 22rem;
+                    font-size: 25px;
+                    background-color: white;
+                    padding: 15px;
+                    border-radius: 50%;
+                }
+
+                .fa-heart:hover {
+                    color: red;
+                }
+            }
+
+            #img_3 {
+                position: relative;
+                display: flex;
+                align-items: end;
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-image: url(./img/3.webp);
+
+
+                #sostenibiliti {
+                    background-color: var(--za-safe);
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    height: 30px;
+                    margin-bottom: 40px;
+                    color: white;
+                }
+
+                .sconto {
+                    background-color: var(--za-danger);
+                    color: white;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    height: 30px;
+                    margin-bottom: 40px;
+                    margin-right: 5px;
+                }
+
+                .fa-solid,
+                .fa-heart {
+                    position: absolute;
+                    bottom: 34rem;
+                    left: 22rem;
+                    font-size: 25px;
+                    background-color: white;
+                    padding: 15px;
+                    border-radius: 50%;
+                }
+
+                .fa-heart:hover {
+                    color: red;
+                }
+            }
+
+            #img_4 {
+                position: relative;
+                display: flex;
+                align-items: end;
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-image: url(./img/4.webp);
+
+                #sostenibiliti {
+                    background-color: var(--za-safe);
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    height: 30px;
+                    margin-bottom: 40px;
+                    color: white;
+                }
+
+                .sconto {
+                    background-color: var(--za-danger);
+                    color: white;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    height: 30px;
+                    margin-bottom: 40px;
+                    margin-right: 5px;
+                }
+
+                .fa-solid,
+                .fa-heart {
+                    position: absolute;
+                    bottom: 34rem;
+                    left: 22rem;
+                    font-size: 25px;
+                    background-color: white;
+                    padding: 15px;
+                    border-radius: 50%;
+                }
+
+                .fa-heart:hover {
+                    color: red;
+                }
+            }
+
+            #img_5 {
+                position: relative;
+                display: flex;
+                align-items: end;
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-image: url(./img/5.webp);
+
+                #sostenibiliti {
+                    background-color: var(--za-safe);
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    height: 30px;
+                    margin-bottom: 40px;
+                    color: white;
+                }
+
+                .sconto {
+                    background-color: var(--za-danger);
+                    color: white;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    height: 30px;
+                    margin-bottom: 40px;
+                    margin-right: 5px;
+                }
+
+                .fa-solid,
+                .fa-heart {
+                    position: absolute;
+                    bottom: 34rem;
+                    left: 22rem;
+                    font-size: 25px;
+                    background-color: white;
+                    padding: 15px;
+                    border-radius: 50%;
+                }
+
+                .fa-heart:hover {
+                    color: red;
+                }
+            }
+
+            #img_6 {
+                position: relative;
+                display: flex;
+                align-items: end;
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-image: url(./img/6.webp);
+
+                #sostenibiliti {
+                    background-color: var(--za-safe);
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    height: 30px;
+                    margin-bottom: 40px;
+                    color: white;
+                }
+
+                .sconto {
+                    background-color: var(--za-danger);
+                    color: white;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    height: 30px;
+                    margin-bottom: 40px;
+                    margin-right: 5px;
+                }
+
+                .fa-solid,
+                .fa-heart {
+                    position: absolute;
+                    bottom: 34rem;
+                    left: 22rem;
+                    font-size: 25px;
+                    background-color: white;
+                    padding: 15px;
+                    border-radius: 50%;
+                }
+
+                .fa-heart:hover {
+                    color: red;
+                }
+            }
+
+            #img_1:hover {
+                background-image: url(./img/1b.webp);
+                transition: 1s;
+            }
+
+            #img_2:hover {
+                background-image: url(./img/2b.webp);
+                transition: 1s;
+            }
+
+            #img_3:hover {
+                background-image: url(./img/3b.webp);
+                transition: 1s;
+            }
+
+            #img_4:hover {
+                background-image: url(./img/4b.webp);
+                transition: 1s;
+            }
+
+            #img_5:hover {
+                background-image: url(./img/5b.webp);
+                transition: 1s;
+            }
+
+            #img_6:hover {
+                background-image: url(./img/6b.webp);
+                transition: 1s;
+            }
+
+            .prezzo_descrizione {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: calc(100% / 12 * 2);
+
+                .container_prices {
+                    display: flex;
+
+                    .new_price {
+                        width: 17%;
+                        color: red;
+                    }
+
+                    .old_price {
+                        width: 17%;
+                        text-decoration: line-through;
+                    }
+                }
+            }
         }
     }
+}
+
+/*credits*/
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    height: 70px;
+
+
 }
