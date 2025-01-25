@@ -6,20 +6,6 @@
 
 }
 
-#debug {
-    main {
-        background-color: rgba(0, 0, 255, 0.454);
-    }
-
-    .row_product {
-        background-color: red;
-    }
-
-    .product {
-        background-color: green;
-    }
-}
-
 :root {
     --za-header_color: #ff6900;
     --za-danger: #bb1a10;
@@ -460,10 +446,54 @@ main {
 /*credits*/
 footer {
     display: flex;
-    align-items: center;
+    align-items: end;
     justify-content: center;
     background-color: black;
-    height: 70px;
+    height: 110px;
+    margin-top: 70px;
+
+    section {
+        width: 80%;
+
+        #container_cred_soci {
+            display: flex;
+            justify-content: space-between;
+
+            #container_credits {
+                display: flex;
+                flex-direction: column;
+
+                #titolo_credits {
+                    color: white;
+                    margin-bottom: 10px;
+                }
+
+                .credits {
+                    text-decoration: none;
+                    color: white;
+                    margin-right: 10px;
+
+                }
+            }
 
 
+
+            #titolo_social {
+                color: white;
+                margin-bottom: 10px;
+
+            }
+
+            .fa-x-twitter,
+            .fa-square-facebook,
+            .fa-square-pinterest,
+            .fa-square-youtube,
+            .fa-square-instagram {
+                color: white;
+                font-size: 20px;
+                margin-left: 5px;
+            }
+
+        }
+    }
 }
